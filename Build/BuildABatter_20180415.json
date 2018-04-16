@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "BuildABatter_20180415.data.unityweb",
+"asmCodeUrl": "BuildABatter_20180415.asm.code.unityweb",
+"asmMemoryUrl": "BuildABatter_20180415.asm.memory.unityweb",
+"asmFrameworkUrl": "BuildABatter_20180415.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
