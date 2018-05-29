@@ -11,33 +11,30 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BatterUpTryouts.json", {onProgress: UnityProgress});
     </script>
-   <script>
-				function beeAnim() {
-			    var elem = document.getElementById("animate");   
-			    var pos = 0;
-			    var id = setInterval(frame, 5);
-			    var amplitude = 15;
-			    function frame() {
-			    
-			        elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
-			        pos++; 
-			        if (pos % 3 == 0) {
-			          elem.style.background = "url('bee_01.png')"; 
-			        } else if (pos % 3 == 1) {
-			          elem.style.background = "url('bee_02.png')"; 
-			        }
-			     
-			    }
-				}</script>
-    
+    <script>
+        function beeAnim() {
+          var elem = document.getElementById("animate");   
+          var pos = 0;
+          var id = setInterval(frame, 5);
+          var amplitude = 15;
+          function frame() {
+          
+              elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
+              pos++; 
+              if (pos % 3 == 0) {
+                elem.style.background = "url('bee_01.png')"; 
+              } else if (pos % 3 == 1) {
+                elem.style.background = "url('bee_02.png')"; 
+              }
+           
+          }
+        }</script>
   </head>
-  <body onload="beeAnim();">
+  <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 800px; height: 600px"></div>
-      <div id ="beecontainer">
-		<div id ="animate"></div>
-		</div>
-      <div class="backgroundpicture"></div>
-  </div>
+      <div id="gameContainer" style="width: 800px; height: 600px">
+      <div id ="animate"></div>
+      </div>
+    </div>
   </body>
 </html>
