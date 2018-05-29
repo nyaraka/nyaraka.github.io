@@ -37,7 +37,7 @@ div#bgBar {
     }
 
 p#loadingInfo {
-    color: #666;
+    background-image: url('bg.png');
     letter-spacing: 1px;
     position: absolute;
     width: 100%;
