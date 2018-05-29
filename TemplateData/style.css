@@ -11,6 +11,23 @@
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
 
+#beecontainer {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    left: 50%; 
+    top: 50%;
+     background-image: url('bg.png');
+}
+ 
+#animate {
+    width: 134px;
+    height: 145px;
+    position: absolute;
+    left: 50%; 
+    top: 50%
+    background: url('bee_01.png'); 
+}
 
 div#bgBar {
     position: absolute;
@@ -37,7 +54,7 @@ div#bgBar {
     }
 
 p#loadingInfo {
-    background-image: url('bg.png');
+    /*background-image: url('bg.png');*/
     letter-spacing: 1px;
     position: absolute;
     width: 100%;

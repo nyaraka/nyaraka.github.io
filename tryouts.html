@@ -36,44 +36,34 @@
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 		<link rel="Stylesheet" type="text/css" href="../css/screen_styles.css" />
 		<link rel="Stylesheet" type="text/css" href="../css/screen_layout_large.css" />
+		<link rel="stylesheet" type="text/css" href="TemplateData/style.css" />
 		<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)" href="../css/screen_layout_small.css" />
 		<link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)" href="../css/screen_layout_medium.css" />
 		 <script src="../tryouts/UnityLoader.js"></script>
 		 <style>
-		#beecontainer {
-		  width: 400px;
-		  height: 400px;
-		  position: relative;
-		}
-		#animate {
-			width: 134px;
-		  height: 145px;
-		  position: absolute;
-		  background: url('bee_01.png'); 
-		}
+		
 		</style>
     <script>
       var gameInstance = UnityLoader.instantiate("canvas", "../tryouts/BatterUpTryouts.json");
     </script>
-	<script> // Bee animation.
-	function beeAnim() {
-	  var elem = document.getElementById("animate");   
-	  var pos = 0;
-	  var id = setInterval(frame, 5);
-		var amplitude = 15;
-	  function frame() {
-	  
-	      elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
-				pos++; 
-				if (pos % 3 == 0) {
-	        elem.style.background = "url('bee_01.png')"; 
-	    	} else if (pos % 3 == 1) {
-	        elem.style.background = "url('bee_02.png')"; 
-	    	}
-	   
-	  }
-	}
-	</script>
+	<script>
+				function beeAnim() {
+			    var elem = document.getElementById("animate");   
+			    var pos = 0;
+			    var id = setInterval(frame, 5);
+			    var amplitude = 15;
+			    function frame() {
+			    
+			        elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
+			        pos++; 
+			        if (pos % 3 == 0) {
+			          elem.style.background = "url('bee_01.png')"; 
+			        } else if (pos % 3 == 1) {
+			          elem.style.background = "url('bee_02.png')"; 
+			        }
+			     
+			    }
+				}</script>
 
     </head>
 
@@ -87,18 +77,10 @@
 
 		<div class="batterupgame">
         <a href="../index.php" class="batterup_back"></a>
-        	<!-- CUSTOM LOADING SCREEN -->
-			<div class="container clear" id="loading">
-			    <!-- <img src="img/logo.png" width="256px" height="256px" alt="logo" title="logo" /> -->
-			    <!-- <div class="loader"></div> -->
-			    <div id ="beecontainer">
+       		<div id ="beecontainer">
 				<div id ="animate"></div>
-				<script> beeAnim(); </script>
-			</div>
-			</div>
-
-			<!-- UNITY GAME CANVAS -->
-			<div id="canvas" style="width: 800px; height: 600px; margin: auto"></div>
+				<script>beeAnim();</script>
+			<div id="canvas" style="width: 800px; height: 600px; margin: auto; display: none"></div>
 			
 		</div>
     </div>
