@@ -55,25 +55,24 @@
     <script>
       var gameInstance = UnityLoader.instantiate("canvas", "../tryouts/BatterUpTryouts.json");
     </script>
-	<script> // Bee animation.
-	function beeAnim() {
-	  var elem = document.getElementById("animate");   
-	  var pos = 0;
-	  var id = setInterval(frame, 5);
-		var amplitude = 15;
-	  function frame() {
-	  
-	      elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
-				pos++; 
-				if (pos % 3 == 0) {
-	        elem.style.background = "url('bee_01.png')"; 
-	    	} else if (pos % 3 == 1) {
-	        elem.style.background = "url('bee_02.png')"; 
-	    	}
-	   
-	  }
-	}
-	</script>
+	<script>
+				function beeAnim() {
+			    var elem = document.getElementById("animate");   
+			    var pos = 0;
+			    var id = setInterval(frame, 5);
+			    var amplitude = 15;
+			    function frame() {
+			    
+			        elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
+			        pos++; 
+			        if (pos % 3 == 0) {
+			          elem.style.background = "url('bee_01.png')"; 
+			        } else if (pos % 3 == 1) {
+			          elem.style.background = "url('bee_02.png')"; 
+			        }
+			     
+			    }
+				}</script>
 
     </head>
 
@@ -93,7 +92,7 @@
 			    <!-- <div class="loader"></div> -->
 			    <div id ="beecontainer">
 				<div id ="animate"></div>
-				<script> beeAnim(); </script>
+				<script>beeAnim();</script>
 			</div>
 			</div>
 
