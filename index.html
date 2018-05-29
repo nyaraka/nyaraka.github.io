@@ -6,13 +6,15 @@
     <title>Unity WebGL Player | BatterUp</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <script type="text/javascript" src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
+    <script type="text/javascript" src="TemplateData/CSSPlugin.js"></script>
     <script src="TemplateData/UnityProgress.js"></script>  
     <script src="Build/UnityLoader.js"></script>
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BatterUp.json", {onProgress: UnityProgress});
     </script>
-    <script type="text/javascript" src="https://code.createjs.com/tweenjs-0.6.0.min.js"></script>
-    <script type="text/javascript" src="TemplateData/CSSPlugin.js"></script>
+   
+    
   </head>
   <body>
     <div class="webgl-content">
