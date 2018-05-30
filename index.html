@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | BatterUp</title>
+    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="Build/UnityLoader.js"></script>
+    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BatterUpTryouts.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
     </script>
     <script>
         function beeAnim() {
@@ -32,8 +32,8 @@
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 800px; height: 600px">
-      <div id ="animate"></div>
+      <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px">
+       <div class ="animate"></div>
       </div>
     </div>
   </body>
