@@ -11,7 +11,6 @@
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
 
 #animate {
-	animation: bee 0.5s infinite;
     width: 134px;
     height: 145px;
     position: absolute;
@@ -19,13 +18,4 @@
     top: 50%;
     background: url('bee_01.png');
     z-index: 10;
-}
-
-@keyframes bee {
-	0% {
-		background: url('TemplateData/bee_01.png');
-	}
-	50 % {
-		background: url('TemplateData/bee_02.png');
-	}
 }
