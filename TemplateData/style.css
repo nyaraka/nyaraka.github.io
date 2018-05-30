@@ -13,8 +13,8 @@
 #animate {
     width: 134px;
     height: 145px;
-    position: relative;
-    left: 50%; 
+    position: absolute;
+    left: 42.5%; 
     top: 50%;
     background: url('bee_01.png');
     z-index: 10;
