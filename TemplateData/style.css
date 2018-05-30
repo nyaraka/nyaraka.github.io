@@ -19,3 +19,21 @@
     background: url('bee_01.png');
     z-index: 10;
 }
+
+#cloudone {
+    width: 184px;
+    height: 39px;
+    position: absolute;
+    top: 10%;
+    background: url('cloud_01.png');
+    z-index: 10;
+}
+
+#cloudtwo {
+    width: 449px;
+    height: 31px;
+    position: absolute;
+    top: 70%;
+    background: url('cloud_02.png');
+    z-index: 10;
+}

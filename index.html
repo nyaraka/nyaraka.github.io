@@ -18,12 +18,18 @@
   <body onload="beeAnim()">
     <div class="webgl-content">
 			<div id ="animate"></div>
+      <div id ="cloudone"></div><div id ="cloudtwo"></div>
       <div id="gameContainer" style="width: 800px; height: 600px; margin: auto">
       </div>
     </div>
 		<script>
 			
 			 function beeAnim() {
+          var c1 = document.getElementById("cloudone");
+          var c2 = document.getElementById("cloudtwo");
+          var p1 = 600;
+          var p2 = 350;
+
           var elem = document.getElementById("animate");   
           var pos = 0;
 				 	var offset = 200;
@@ -38,7 +44,11 @@
               } else if (pos % 3 == 1) {
                 elem.style.background = "url('TemplateData/bee_02.png')"; 
               }
-           
+              
+              c1.style.left = p1+ 'px';
+              c2.style.left = p2+ 'px';
+              p1--;
+              p2--;
           }
         }
 		</script>
