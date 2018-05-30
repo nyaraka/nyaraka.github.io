@@ -15,6 +15,7 @@
     height: 145px;
     position: absolute;
     left: 50%; 
-    top: 50%
-    background: url('bee_01.png'); 
+    top: 50%;
+    background: url('bee_01.png');
+    z-index: 10;
 }
