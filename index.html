@@ -25,32 +25,38 @@
 		<script>
 			
 			 function beeAnim() {
+          var elem = document.getElementById("animate");
           var c1 = document.getElementById("cloudone");
           var c2 = document.getElementById("cloudtwo");
-          var p1 = 600;
-          var p2 = 350;
-
-          var elem = document.getElementById("animate");   
+          var p1 = 1200;
+          var p2 = 900;
           var pos = 0;
-				 	var offset = 200;
+          var offset = parseInt((screen.height/5));
           var id = setInterval(frame, 5);
           var amplitude = 15;
           function frame() {
+              c1.style.left = p1+ 'px';
+              c2.style.left = p2+ 'px';
+              p1-= 0.5;
+              p2-= 0.5;
+            
+              if(p1 < 0){
+                p1 = 1200;
+              }
+              if(p2 < 0){
+                p2 = 900;
+              }
           
               elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + offset + 'px';
               pos++; 
               if (pos % 3 == 0) {
-                elem.style.background = "url('TemplateData/bee_01.png')"; 
+                elem.style.background = "url('templatedata/bee_01.png')"; 
               } else if (pos % 3 == 1) {
-                elem.style.background = "url('TemplateData/bee_02.png')"; 
+                elem.style.background = "url('templatedata/bee_02.png')"; 
               }
-              
-              c1.style.left = p1+ 'px';
-              c2.style.left = p2+ 'px';
-              p1--;
-              p2--;
+           
           }
         }
-		</script>
+        		</script>
   </body>
 </html>
