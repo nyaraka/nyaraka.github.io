@@ -10,7 +10,7 @@
 .webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
 .webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
 
-.animate {
+#animate {
     width: 134px;
     height: 145px;
     position: absolute;

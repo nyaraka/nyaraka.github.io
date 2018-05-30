@@ -6,35 +6,43 @@
     <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="%UNITY_WEBGL_LOADER_URL%"></script>
-    <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {onProgress: UnityProgress});
-    </script>
-    <script>
-        function beeAnim() {
+		
+		<script src="TemplateData/UnityProgress.js"></script>	
+		<script src="Build/UnityLoader.js"></script>
+		<script>
+		
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/BatterUpTryouts.json", {onProgress: UnityProgress});
+    
+			</script>
+  </head>
+  <body onload="beeAnim()">
+    <div class="webgl-content">
+			<div id ="animate"></div>
+      <div id="gameContainer" style="width: 800px; height: 600px; margin: auto">
+      </div>
+    </div>
+		<script>
+			
+			 function beeAnim() {
           var elem = document.getElementById("animate");   
           var pos = 0;
+				 	var offset = 200;
           var id = setInterval(frame, 5);
           var amplitude = 15;
           function frame() {
           
-              elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + 'px';
+              elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + offset + 'px';
               pos++; 
               if (pos % 3 == 0) {
-                elem.style.background = "url('bee_01.png')"; 
+                elem.style.background = "url('templatedata/bee_01.png')"; 
               } else if (pos % 3 == 1) {
-                elem.style.background = "url('bee_02.png')"; 
+                elem.style.background = "url('templatedata/bee_02.png')"; 
               }
            
           }
-        }</script>
-  </head>
-  <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px">
-       <div class ="animate"></div>
-      </div>
-    </div>
+        }
+			
+
+		</script>
   </body>
 </html>
