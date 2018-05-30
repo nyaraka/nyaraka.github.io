@@ -47,7 +47,7 @@
                 p2 = 900;
               }
           
-              elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + offset + 'px';
+              elem.style.top = Math.sin(pos * Math.PI/180) * amplitude + (offset-50) + 'px';
               pos++; 
               if (pos % 3 == 0) {
                 elem.style.background = "url('TemplateData/bee_01.png')"; 
