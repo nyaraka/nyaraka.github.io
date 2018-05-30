@@ -6,10 +6,10 @@ function UnityProgress(gameInstance, progress) {
   //   gameInstance.logo.className = "logo " + gameInstance.Module.splashScreenStyle;
   //   gameInstance.container.appendChild(gameInstance.logo);
   // // }
-  // if (!gameInstance.animate) {
-  //   gameInstance.animate = document.createElement("div");
-  //   gameInstance.animate.className = "animate";
-  // }
+  if (!gameInstance.animate) {
+    gameInstance.animate = document.getElementById("animate");
+    gameInstance.animate.className = "animate";
+  }
   if (!gameInstance.progress) {    
     gameInstance.progress = document.createElement("div");
     gameInstance.progress.className = "progress " + gameInstance.Module.splashScreenStyle;
@@ -23,8 +23,9 @@ function UnityProgress(gameInstance, progress) {
   }
   gameInstance.progress.full.style.width = (100 * progress) + "%";
   gameInstance.progress.empty.style.width = (100 * (1 - progress)) + "%";
+
   if (progress == 1) {
     gameInstance.progress.style.display = "none";
-    document.getElementById("animate").style.display = "none";
+    gameInstance.animate.style.display = "none";
   }
 }
