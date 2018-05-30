@@ -8,7 +8,12 @@ function UnityProgress(gameInstance, progress) {
   // // }
   if (!gameInstance.animate) {
     gameInstance.animate = document.getElementById("animate");
-    gameInstance.animate.className = "animate";
+  }
+  if (!gameInstance.cloudone) {
+    gameInstance.cloudone = document.getElementById("cloudone");
+  }
+  if (!gameInstance.cloudtwo) {
+    gameInstance.cloudtwo = document.getElementById("cloudtwo");
   }
   if (!gameInstance.progress) {    
     gameInstance.progress = document.createElement("div");
@@ -27,5 +32,7 @@ function UnityProgress(gameInstance, progress) {
   if (progress == 1) {
     gameInstance.progress.style.display = "none";
     gameInstance.animate.style.display = "none";
+    gameInstance.cloudone.style.display = "none";
+    gameInstance.cloudtwo.style.display = "none";
   }
 }
